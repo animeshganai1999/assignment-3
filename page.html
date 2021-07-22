@@ -1,0 +1,27 @@
+<html>
+  <head> </head>
+  <body>
+    <form>
+      <label>Name</label>
+      <input
+        id="name"
+        placeholder="Enter name"
+        autocomplete="off"
+        onkeyup="suggest(this.value)"
+      />
+    </form>
+    <div id="suggest"></div>
+    <script id="nameTemplate" type="text/x-handlebars-template">
+      {{#each this}}
+        <p>First Name:{{name}}</p>
+        <p>Last Name:{{last_name}}</p>
+        <p>Age:{{age}}</p>
+        <p>Department:{{department}}</p>
+        <p>Address:{{address}}</p>
+      {{/each}}
+    </script>
+    <div id="details"></div>
+  </body>
+  <script src="index13.js"></script>
+  <script src="handlebars-v4.7.7.js"></script>
+</html>
